@@ -1,10 +1,14 @@
-import logo from '../assets/image/logo.svg';
-import { Routes } from '../config';
+//import logo from '../assets/image/logo.svg';
+import { Routes, store } from '../config';
+import { Provider } from 'react-redux';
+
 import './App.css';
 
 function App() {
-  return (
-    <Routes/>
+  return (//component App dibungkus Provider yg memiliki props store agar store dapat digunakan sebagai state global
+    <Provider store = {store}>
+      <Routes/>
+    </Provider>
   );
 }
 

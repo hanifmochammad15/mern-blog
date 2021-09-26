@@ -13,10 +13,10 @@ const MainApp = () => {
             <div  className="content-wrapper">
                 <Router>
                     <Switch>
-                        <Route path="/create-blog">
+                        <Route path="/create-blog/:id?">{/* dengan menambahkan tanda tanya paramater bersifat optional */}
                             <CreateBlog/>
                         </Route>
-                        <Route path="/detail-blog">
+                        <Route path="/detail-blog/:id"> {/* paramater bersifat wajib */}
                             <DetailBlog/>
                         </Route>
                         <Route path="/">
